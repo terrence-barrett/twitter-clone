@@ -18,13 +18,20 @@
                 <div align="center">
                     <input name="body" placeholder="Say something inspiring" value="{{ posts.body }}" required>
                 </div>
+
                 
+                <div align="center">
+                    <input type="file" name="image">
+                </div>
                 <br>
+                {% if post.image.url %}
+                <img src="{{ post.image.url }}" alt="" width="100%" >
+                {% endif %}
                 
                 <div>
                     <div align="center">
-                        <a href="{% url 'index' %}" id="cancel" type="submit">
-                            <input id="button" type="submit" value="Cancel">
+                        <a href="/">
+                            <input id="button" type="button" value="Cancel">
                         </a>
                     </div>
                     <br>

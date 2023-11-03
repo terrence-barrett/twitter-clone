@@ -66,6 +66,7 @@ def edit(request, post_id):
     # If the request method is not POST (e.g., a GET request), or if the form is not submitted,
     # render an 'edit.html' template with the post information for editing
     return render(request, 'edit.html', {'posts': posts})
+
 #LIKE-FUNCTION---------------------------------------------------------------------------------------------------------------------------------------------------------------
 def likes(request, post_id):
     likecount = Post.objects.get(id = post_id)
