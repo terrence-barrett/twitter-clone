@@ -45,12 +45,12 @@ def delete(request, post_id):
 # EDIT FUNCTION
 def edit(request, post_id):
     # Retrieve the post with the given 'post_id' from the database
-    posts = Post.objects.get(id=post_id)
+    post = Post.objects.get(id=post_id)
 
     # Check if the request method is POST (usually for form submissions)
     if request.method == 'POST':
         # Create a form instance for editing the post
-        form = PostForm(request.POST, request.FILES, instance=posts)
+        form = PostForm(request.POST, request.FILES, instance=post)
 
         # Check if the form data is valid
         if form.is_valid():
@@ -62,10 +62,10 @@ def edit(request, post_id):
         else:
             # If the form is not valid, return a response indicating that it's not valid
             return HttpResponseRedirect("not valid")
-
+    form = PostForm
     # If the request method is not POST (e.g., a GET request), or if the form is not submitted,
     # render an 'edit.html' template with the post information for editing
-    return render(request, 'edit.html', {'posts': posts})
+    return render(request, 'edit.html', {'post': post, 'form':form})
 
 #LIKE-FUNCTION---------------------------------------------------------------------------------------------------------------------------------------------------------------
 def likes(request, post_id):

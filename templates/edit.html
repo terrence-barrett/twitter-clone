@@ -8,15 +8,15 @@
         </div>
 
         <section class="post_form">
-            <form action="/edit/{{ posts.id }}/" method="POST" enctype="multipart/form-data">
+            <form action="/edit/{{ post.id }}/" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 
                 <div align="center">
-                    <input type="text" name="name" placeholder="Name" value="{{ posts.name }}">
+                    <input type="text" name="name" placeholder="Name" value="{{ post.name }}">
                 </div>
                 
                 <div align="center">
-                    <input name="body" placeholder="Say something inspiring" value="{{ posts.body }}" required>
+                    <input name="body" placeholder="Say something inspiring" value="{{ post.body }}" required>
                 </div>
 
                 

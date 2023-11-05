@@ -9,9 +9,6 @@ height: fit-Content;
     max-width: 600px;
     max-height: 100%;
     margin: 0 auto;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-
 }
 
 
@@ -27,11 +24,11 @@ height: fit-Content;
     position: absolute;
     top: 40px;
     right: 15px;
-    border: 1px solid #ccc;
-    background-color: white;
+    background-color: rgb(211, 211, 211);
     padding: 10px 15px;
     font-size: 13px;
     border-radius: 3px;
+    text-decoration: none;
 }
 
 
@@ -41,20 +38,23 @@ height: fit-Content;
 
 .post_form {
     padding: 20px 40px;
-    border-bottom: 1px solid #ccc;
 }
 
 .post_form input {
     width: 70%;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid grey;
+    background-color: #ccc;
+    border-radius: 10px;
 }
 
 .post_form textarea {
     width: 70%;
     padding: 10px;
-    border: 1px solid #ccc;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px ;
 }
 
 .posts ul{
@@ -64,21 +64,27 @@ height: fit-Content;
 .posts li {
     position: relative;
     display: flex;
-    border-bottom: 1px solid #ccc;
+    border: 2px solid #000;
     padding: 17px;
+    border-radius: 10px;
 }
 
 .posts li .logo {
-    flex-basis: 15%;
+    flex-basis: 10%;
+    color: antiquewhite;
+    border-radius: 6rem;
 }
 
 .posts li .logo img {
     height: 100px;
-    padding-right: 10px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 1rem;
 }
 
 .posts li .name_body {
     flex-basis: 85%;
+    
 }
 
 .posts li .name_body .name {
@@ -86,11 +92,113 @@ height: fit-Content;
 }
 
 .posts li .name_body .date_time {
-    color: grey;
+    color: black;
 }
+
+section {
+    border-radius: 10px;
+}
+
+img {
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
 
 @media screen and (max-width: 500px) {
     .posts li .name_body .name{
         font-size: 20px;
     }
 }
+
+body {
+    background-color: grey;
+}
+
+li {
+    border-color: #000;
+    background-color: #ccc;
+}
+
+#like_button:hover {
+  color: green;
+}
+
+#dislike_button:hover {
+  color: red;
+}
+
+#tweet:hover {
+    color: rgb(0, 174, 255);
+}
+
+
+.title {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    transform: skew(-45deg, 50% 50%);
+    letter-spacing: 5px;
+    animation: spread 2s linear infinite;
+}
+
+@keyframes spread {
+    0% {
+    transform: skew(-45deg, 50% 50%);
+    letter-spacing: 1px;
+    color: #fff;
+    }
+    10% {
+    transform: skew(-45deg, 50% 50%);
+    letter-spacing: 2px;
+    color: #f97453;
+    }
+    20% {
+        transform: skew(-45deg, 50% 50%);
+        letter-spacing: 3px;
+        color: #ffbf00;
+    }
+    30% {
+        transform: skew(-45deg, 50% 50%);
+        letter-spacing: 4px;
+        color: #b4ed50;
+    }
+    40% {
+        transform: skew(-45deg, 50% 50%);
+        letter-spacing: 5px;
+        color: #00FFFF;
+    }
+    50% {
+        transform: skew(-45deg, 50% 50%);
+        letter-spacing: 6px;
+        color: #800080;
+    }
+    60% {
+        transform: skew(-45deg, 50% 50%);
+        letter-spacing: 7px;
+        color: #DF0030;
+    }
+    70% {
+        transform: skew(-45deg, 50% 50%);
+        letter-spacing: 8px;
+        color: #FF0000;
+    }
+    80% {
+        transform: skew(-45deg, 50% 50%);
+        letter-spacing: 9px;
+        color: #FFFFFF;
+    }
+    90% {
+        transform: skew(-45deg, 50% 50%);
+        letter-spacing: 10px;
+        color: #f97453;
+    }
+    100% {
+        transform: skew(-45deg, 50% 50%) translate(100%, 0);
+        letter-spacing: 1px;
+        color: #fff;
+    }
+}
+
